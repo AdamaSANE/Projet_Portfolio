@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "aside content";
+}
+
+aside{
+    background-color: green;
+    grid-area: aside;
+}
+
+.content {
+    background-color: brown;
+    grid-area: content;
+}
+
+/****************** MEDIA SCREEN *****************/
+
+@media screen and (max-width: 801px) {
+    .container {
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 3fr ;
+        grid-template-areas: "aside" "content";
+    }
+} 
