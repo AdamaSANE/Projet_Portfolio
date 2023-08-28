@@ -63,7 +63,7 @@ h5 {
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 ul {
@@ -104,7 +104,7 @@ a {
 .fixed-top {
   position: fixed;
   top: 0;
-  right: 0;
+  right:0;
   left: 0;
   z-index: 1030;
 }
@@ -156,9 +156,9 @@ img{
   display: none;
 }
 
-.inline-block {
+/* .inline-block {
   display: inline-block;
-}
+} */
 
 .flex {
   display: flex;
@@ -904,6 +904,18 @@ img{
 .gap-25 {
   gap: 25px;
 }
+.gap-30 {
+  gap: 25px;
+}
+.gap-35 {
+  gap: 25px;
+}
+.gap-40 {
+  gap: 25px;
+}
+.gap-45 {
+  gap: 25px;
+}
 
 /*------------------*
 # Container
@@ -915,11 +927,11 @@ img{
 .container-lg,
 .container-md,
 .container-sm {
-  width: 100%;
+  /* width: 100%;
   padding-right: var(10);
   padding-left: var(10);
   margin-right: auto;
-  margin-left: auto;
+  margin-left: auto; */
 }
 
 @media (min-width: 576px) {

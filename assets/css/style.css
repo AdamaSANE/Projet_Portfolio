@@ -4,26 +4,28 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container-home {
+.Container {
     display: grid;
-    height: 100vh;
+    height: 100VH;
     grid-template-columns:1fr 3fr;
     grid-template-areas: "aside content";
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #aside{
     grid-area: aside;
+    border-right: 4px solid gainsboro;
 }
 
 .content {
     grid-area: content;
+    overflow-y: scroll;
+    border-left: 10px solid gainsboro;
+    
 }
 
 /************** ASIDE *************/
-#aside {
-    border-right: 10px solid gainsboro;
-}
+
 .nav-item {
     padding-top: 25px;
     text-align: center;
@@ -31,7 +33,7 @@ body {
 .nav-item a {
     font-weight: bold;
     display:block;
-    padding: 6px 0;
+    padding: 12px 0;
     border-top: 1px solid gainsboro;
     border-bottom: 1px solid gainsboro;
     cursor: pointer;
@@ -64,70 +66,512 @@ body {
 
 /****************** CONTENT *****************/
 
-.home-page {
-    height: 100%;
+/* HOME-PAGE */
+
+
+.Container .home-page {
+    height:100%;
     width: 100%;
     max-width: 100%;
-    background: url(/assets/images/Home-background/Home_background.jpg) center;
+    background-image: url(/assets/images/Home-background/Home_background.jpg);
     background-size: cover;
-    filter: brightness(60%);
+    background-position: center;
+    margin-bottom: 30px;
 }
-.home-page i {
-    background-color: white ;
+
+.Container .content .home-page .nav-fa {
+    float: right ; 
     margin-top: 60px;
+    margin-right: 30px;
+}  
+.Container .content .home-page .nav-fa i {
+    background-color: white ;
     width: 30px;
     height: 20px;
     border-radius: 3px 0px 0px 3px;
     padding-top: 8px;
     text-align: center;
-    float: right;
     color: orange;
+    border: 1px solid gainsboro;
+    border-right: none;
 }
 .nav-home{
-    color:red;
-   text-align: center;
-   padding-top: 25%;
+   color: white ;
+   padding-top: 15%;
    
-   
-   
+}
+.nav-home .nav-title h1 {
+    font-size: 70px;
 }
 .nav-home .nav-title h1,
 .nav-home .nav-title h6 {
+    text-align: center;
     margin-bottom: 15px;
 }
 .nav-home .nav-details {
     padding-top: 0px;
+    font-size: 15px;
+    margin-left: 30%;
+    
 }
 .nav-home .nav-details ul li {
     padding-top: 15px;
-    font-size: medium;
-    initial-letter-align : auto ;
+    
     
 }
 .nav-home .nav-details ul li a {
     border-bottom: 2px solid orange;
     font-weight: bold;
+
+}
+
+/* ABOUTE-ME */
+.About-me {
+    max-width: 100%;
+    margin-top: 30px;
+}
+.about-title {
+    display: flex;
+    align-items: center;
+}
+.about-title h4 {
+    background-color: orange;
+    color: white;
+    width: 100px;
+    height: 30px;
+    padding-top: 6px;
+    padding-left: 70px;
+    font-size: 20px;
+}
+.about-title p{
+    margin-left: 10px;
+    padding-bottom: 15px;
+    color: gray;
+}
+#step-2 {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+}
+#step-2 h4{
+    margin-top: 0px;
+    border-bottom: 2px solid orange;
+    width: 110px;
+}
+#step-2  p {
+    background-color: ghostwhite;
+    float: right;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 300px;
+    height: 70px;
+    text-align: start;
+    padding: 8% 4%;
+}
+#step-2 h5 {
+    font-size: 13px;
+    margin-top: -40px;
+    margin-left: 75px;
+}
+#step-2 .profile h6 {
+    font-size: 9px;
+    margin-top: -20px;
+    margin-left: 75px;
+    color: gray;
+}
+#step-2 img {
+    margin-top:-35px;
+    background-color: ghostwhite;
+    width: 60px;
+    border-radius: 30px;
+    border: 1px solid gray;
+
+}
+#step-2 .icon {
+    float: right;
+    margin-top: -35px;
+}
+#step-2 .icon i {
+    width: 20px;
+    height: 20px;
+    background-color: gainsboro;
+    padding-top: 6px;
+    padding-left: 10px;
+}
+
+.About-me .steps {
+    display: flex;
+}
+
+.About-me .steps {
+    margin:0 70px;
+}
+.About-me .steps #step-1,
+.About-me .steps #step-2 {
+    width: 380px;
+}
+
+.About-me h4 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.About-me p {
+    color: grey;
+    text-align: justify;
+}
+/* SERVICE */
+
+.service {
+    margin: 30px 70px;
+
+}
+.service h4 {
+    margin-top: 60px;
+    width: 70px;
+    border-bottom: 2px solid orange;
+}
+.liste-service {
+    display: flex;
+}
+.step {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 120px;
+    width: 170px;
+    height: 180px;
+}
+.step :nth-child(1) {
+    margin-top: none !important;
+}
+.step img {
+    padding-bottom: 15px;
+    width: 90px;
+    height: 95px;
+}
+.step h6 {
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+    font-size: 20px;
+
+}
+.step p {
+    text-align: center;
+    margin: 0px;
+}
+/* CLIENTS */
+.client {
+    margin: 30px 70px;
+}
+.client h4 {
+    margin-top: 60px;
+    width: 55px;
+    border-bottom: 2px solid orange;
+}
+.liste-client {
+    margin-top: 50px;
+    display: flex;
+}
+.liste-client img {
+    margin-bottom: 20px;
+    width: 110px;
+    height: 110px;
+    justify-content: center;
+}
+/* FUN-FACTS */
+.fun-facts {
+    margin: 30px 70px;
+}
+.liste-fun {
+    margin-top: 0px;
+    display: flex;
+}
+.fun-facts h4 {
+    margin-bottom: 50px;
+    margin-top: 60px;
+    width: 90px;
+    border-bottom: 2px solid orange;
+}
+.liste-fun .fun {
+    width: 170px !important;
+    height: 200px !important;
+    border: 0.2px solid gainsboro;
+    text-align: center;
+    border-radius: 8px;
+}
+.liste-fun .fun h6 {
+    margin-bottom: 10px;
+}
+.liste-fun .fun i {
+   margin-top: 30px;
+   margin-bottom: 10px;
+    font-size: 60px;
+    color: gray;
+}
+.liste-fun #color {
+    background-color: gainsboro;
+}
+.liste-fun .fun p {
+    margin: 10px 0 10px 0;
+    color: orange;
+    font-size: 35px;
+    text-align: center;
+}
+/* RESUME */
+.resume-title {
+    display: flex;
+    align-items: center;
+}
+.resume-title h4,
+.folio-title h4,
+.blog-title h4,
+.contact-title h4 {
+    margin-top: 50px;
+    background-color: orange;
+    color: white;
+    width: 100px;
+    max-width: max-content;
+    height: 30px;
+    padding: 6px 8px 0px 70px;
+    font-size: 20px;
+}
+.resume-title p,
+.folio-title p{
+    margin-top: 50px;
+    margin-left: 10px;
+    padding-bottom: 15px;
+    color: gray;
+}
+.parties {
+    display: flex;
+}
+.Resume .parti {
+    width: 250px;
+}
+.parti h3,
+.details h5 {
+    margin-bottom: 30px;
+    margin-top: 40px;
+    width: 180px;
+    max-width: max-content;
+    border-bottom: 2px solid orange;
+}
+#parti {
+    margin-bottom: 40px;
+}
+#parti h6,
+#parti p{
+    padding-left: 20px;
+}
+#parti h6 {
+    margin-bottom: 5px;
+}
+#parti #part {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: gray;
+    font-size: 11px;
+}
+#parti p {
+    color: grey;
+}
+.skill P {
+    margin-top: 10px;
+    margin-bottom: 1px;
+    font-weight: bold;
+}
+.parti h5 {
+    background-color: rgb(92, 225, 25);
+    font-size: 13px;
+    padding: 4px 10px 4px 20px;
+    max-width: max-content;
+    color: white;
+}
+.progressbar-wrapper {
+    border: 2px solid orange;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0.1rem;
+    width: 100%;
+  }
+  .progressbar {
+    background-color: orange;
+    padding: 0.2rem;
+    border-radius: 15px;
+  }
+  .web-design {
+    width: 85%;
+  }
+  .graphic-design {
+    width: 75%;
+  }
+  .print-design {
+    width: 60%;
+  }
+  .html5 {
+    width: 90%;
+  }
+  .css3 {
+    width: 80%;
+  }
+  .jquery {
+    width: 70%;
+  }
+  .wordpress {
+    width: 65%;
+  }
+  .php {
+    width: 55%;
+  }
+  .bttn {
+    margin-top: 50px;
+    margin-left: 70px;
+    background-color: white;
+    cursor: pointer;
+    height: 40px;
+    border: 2px solid orange;
+  }
+
+/* PORTFOLIO */
+.Portfolio ul li {
+    padding: 10px 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    color: gray;
+}
+.Portfolio ul li:nth-child(1) {
+    background-color: orange;
+} 
+.list-work {
+    margin: 50px 0px;
+}
+.list-work img {
+    width: 250px;
+    height: 250px;
+}
+.folio-title p {
+    margin-top: 50px;
+    margin-left: 10px;
+    padding-top: 10px;
+    color: gray;
+}
+/* BLOG */
+.blog-title p,
+.contact-title p{
+    margin-top: 50px;
+    margin-left: 10px;
+    padding-top: 12px;
+    color: gray;
+}
+.blog-list .card {
+    margin-top: 30px;
+    box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.2);
+    width: 370px;
+    height: 370px;
+    text-align: center;
+}
+.blog-list .card img {
+    width: 370px;
+    height: 70%;
+}
+.blog-list .card p {
+    color: gray;
+}
+#date {
+    position: relative;
+    background-color: orange;
+    float: right;
+    color: white;
+    padding: 5px;
+    margin-top: -33px;
+    margin-right: 20px;
+    
+}
+.card h6 {
+    font-size: 16px;
+}
+/* CONTACT */
+.list-contact .details {
+    width: 380px;
+}
+.details .lorem {
+    color: gray;
+    margin-bottom: 20px;
+}
+.details p {
+    margin-bottom: 20px;
+}
+.details .icon{
+    margin-right: 15px;
+    font-size: 20px;
+    color: grey;
+}
+.details span {
+    font-weight: bold;
+}
+.details #input {
+    width: 100%;
+    padding-left: 5px;
+    margin-bottom: 15px;
+    padding: 10px 0px;
+    border: 0.1px solid gainsboro;
+}
+.form i {
+    position: relative;
+    margin-left: -20px;
+    color: gray;
+}
+.form .comment i {
+    position: relative;
+    float: right;
+    margin-top: -90px;
+    padding-right: 5px;
+}
+
+.bttn {
+    padding: 0px 15px;
 }
 
 
 
-/****************** MEDIA SCREEN *****************/
+
+    /****************** MEDIA SCREEN *****************/
 
 
 @media screen and (max-width: 801px) {
-    .container-home {
+    .Container{
         grid-template-columns:1fr;
         grid-template-rows:16% 84%;
         grid-template-areas: "aside" "content";
         justify-content: space-between;
+        max-width: 790px;
+    }
+    #aside{
+        border-right: none;
+    }
+    
+    .content {
+        border-left: none;
     }
     #aside {
-        border-right: none;
+        height: 100%;
     }
     .nav-item  {
         display: none;
     }
+    .home-page {
+        height: 100%;
+    }
+    .nav-home .nav-title h1 {
+        font-size: 50px;
+    }
+    .nav-home .nav-details {
+    
+        margin-left: 30%;
+        margin-right: auto;
+    }
     .header{
+        height: 100%;
         display: flex !important;
         align-items: center !important;
         justify-content: space-between;
@@ -144,11 +588,46 @@ body {
         font-size: xx-large;
         padding-right: 20px;
     }
-    
-    
-
+    .about-title h4 {
+        padding-left: 35px;
     }
+    .about-title p,
+    .resume-title p,
+    .folio-title p,
+    .blog-title p,
+    .contact-title p {
+        display: none;
+    }
+   
+     .steps {
+        margin: 0 8% !important;
+    } 
+    .client,
+    .service,
+    .fun-facts {
+        width: 85%;
+        margin: 30px;
+    }
+    
+} 
 
+@media screen and (max-width: 561px) {
+   .nav-home .nav-details {
+
+       margin-left: 20%;
+       margin-right: auto;
+   }
+   .nav-home {
+       padding-top: 45%;
+   }
+   #step-2  p {
+    width: 80%;
+    height: 70px;
+    font-size: 13px;
+    }
+    .list-contact {
+        margin: 0px 10px;
+    }
     
-    
+} 
     
